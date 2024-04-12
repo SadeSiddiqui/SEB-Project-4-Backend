@@ -1,6 +1,7 @@
 from http import HTTPStatus
 
 from flask import Blueprint, request
+
 from marshmallow.exceptions import ValidationError
 
 # ! import user model

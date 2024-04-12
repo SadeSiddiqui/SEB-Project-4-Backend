@@ -39,7 +39,7 @@ class UserModel(db.Model, BaseModel):
 
         payload = {
             "exp": datetime.now(timezone.utc) + (timedelta(days=1)),  # Expiry date
-            "iat": datetime.now(timezone.UTC),
+            "iat": datetime.now(timezone.utc),
             "sub": self.id,
         }
 

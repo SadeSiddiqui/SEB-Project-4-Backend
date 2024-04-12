@@ -84,9 +84,9 @@ def update_condition(conditions_id):
 
 @router.route("/conditions/<int:conditions_id>", methods=["DELETE"])
 @secure_route
-def remove_condition(condition_id):
+def remove_condition(conditions_id):
 
-    conditions = ConditionsModel.query.get(condition_id)
+    conditions = ConditionsModel.query.get(conditions_id)
 
     if not conditions:
         return {"message": "No condition found"}, HTTPStatus.NOT_FOUND
