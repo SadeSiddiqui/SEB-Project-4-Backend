@@ -96,7 +96,7 @@ def remove_condition(conditions_id):
     return "", HTTPStatus.NO_CONTENT
 
 
-@router.route("/conditions/<int:conditions_id>/comments", methods=["POST"])
+@router.route("/posts/<int:conditions_id>", methods=["POST"])
 @secure_route
 def create_comment(conditions_id):
 
@@ -116,7 +116,7 @@ def create_comment(conditions_id):
     return comment_schema.jsonify(comment), HTTPStatus.CREATED
 
 
-@router.route("/comments/<int:comment_id>", methods=["DELETE"])
+@router.route("/posts/<int:comment_id>", methods=["DELETE"])
 @secure_route
 def remove_comment(comment_id):
 
