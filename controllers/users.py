@@ -17,6 +17,10 @@ router = Blueprint("users", __name__)
 @router.route("/signup", methods=["POST"])
 def signup():
     user_dictionary = request.json
+    if user_dictionary["passwordConfirmation"] != user_dictionary["password"]:
+        return {"error": "Password does not match"}
+    del user_dictionary["passwordConfirmation"]
+
 
     try:
         user = user_schema.load(user_dictionary)
