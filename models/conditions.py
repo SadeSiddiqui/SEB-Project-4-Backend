@@ -4,7 +4,6 @@ from models.users import UserModel
 from models.base import BaseModel
 
 
-
 class ConditionsModel(db.Model, BaseModel):
 
     __tablename__ = "conditions"
