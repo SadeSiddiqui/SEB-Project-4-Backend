@@ -7,6 +7,7 @@ class CommentModel(db.Model, BaseModel):
     __tablename__ = "comments"
 
     content = db.Column(db.Text, nullable=False)
+    title = db.Column(db.Text, nullable=False)
 
     # ! ForeignKey tells you which column to point at (conditions.id)
     # ! so that every comment points to a specific unique condition.
