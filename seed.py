@@ -79,6 +79,7 @@ with app.app_context():
             content="I have Crohns, too! It really affects my skin and eyes.",
             title="Crohn's Sisters!",
             conditions_id=CrohnsDisease.id,
+            user_id=user.id,
         )
         comment1.save()
 
@@ -86,6 +87,7 @@ with app.app_context():
             content="Lupus is so hard to deal with, my friend has it and struggles each day.",
             title="Thanks for sharing.",
             conditions_id=Lupus.id,
+            user_id=user.id,
         )
         comment2.save()
 
@@ -93,6 +95,7 @@ with app.app_context():
             content="I appreciate your advice so much!",
             title="MS is hard!",
             conditions_id=MultipleSclerosis.id,
+            user_id=user.id,
         )
         comment3.save()
 
@@ -100,6 +103,7 @@ with app.app_context():
             content="I have depression as well. Medication helps me deal with it along with therapy.",
             title="Depression struggles",
             conditions_id=Depression.id,
+            user_id=user.id,
         )
         comment4.save()
 
@@ -107,6 +111,7 @@ with app.app_context():
             content="Please know you aren't alone in this!",
             title="Anxiety is a rough thing to deal with.",
             conditions_id=Anxiety.id,
+            user_id=user.id,
         )
         comment5.save()
 
@@ -114,6 +119,7 @@ with app.app_context():
             content="I wish my compulsions weren't so hard to deal with!",
             title="OCD is a daily battle.",
             conditions_id=Anxiety.id,
+            user_id=user.id,
         )
         comment6.save()
 

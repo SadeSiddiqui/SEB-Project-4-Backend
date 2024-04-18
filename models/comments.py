@@ -15,3 +15,9 @@ class CommentModel(db.Model, BaseModel):
     conditions_id = db.Column(
         db.Integer, db.ForeignKey("conditions.id"), nullable=False
     )
+
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+
+    user = db.relationship(
+        "UserModel", backref="users", cascade="all, delete"
+    )

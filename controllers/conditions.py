@@ -101,13 +101,18 @@ def remove_condition(conditions_id):
 def create_comment(conditions_id):
 
     comment_dictionary = request.json
+    comment_dictionary['conditions_id'] = conditions_id
+    comment_dictionary['user_id'] = g.current_user.id
+
 
     existing_conditions = ConditionsModel.query.get(conditions_id)
     if not existing_conditions:
         return {"message": "No condition found"}, HTTPStatus.NOT_FOUND
 
     try:
+        print("Hey")
         comment = comment_schema.load(comment_dictionary)
+        print("hello")
         comment.conditions_id = conditions_id
         comment.save()
     except ValidationError as e:
@@ -116,15 +121,30 @@ def create_comment(conditions_id):
     return comment_schema.jsonify(comment), HTTPStatus.CREATED
 
 
+# @router.route("/posts/<int:comment_id>", methods=["DELETE"])
+# @secure_route
+# def remove_comment(comment_id):
+
+#     comment = CommentModel.query.get(comment_id)
+
+#     if not comment:
+#         return {"message": "No comment found"}, HTTPStatus.NOT_FOUND
+
+#     # Check if the current user is the author of the comment
+
+#     comment.remove()
+
+#     return "", HTTPStatus.NO_CONTENT
+
 @router.route("/posts/<int:comment_id>", methods=["DELETE"])
 @secure_route
 def remove_comment(comment_id):
-
+    current_user = g.current_user  # Get the current user from the g object
     comment = CommentModel.query.get(comment_id)
-
     if not comment:
         return {"message": "No comment found"}, HTTPStatus.NOT_FOUND
-
+    # Check if the current user is the author of the comment
+    if comment.user_id != current_user.id:
+        return {"message": "You are not authorized to delete this comment"}, HTTPStatus.UNAUTHORIZED
     comment.remove()
-
     return "", HTTPStatus.NO_CONTENT
