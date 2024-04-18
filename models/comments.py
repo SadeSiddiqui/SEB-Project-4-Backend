@@ -18,6 +18,4 @@ class CommentModel(db.Model, BaseModel):
 
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
-    user = db.relationship(
-        "UserModel", backref="users", cascade="all, delete"
-    )
+    user = db.relationship("UserModel", backref="users")
