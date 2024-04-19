@@ -25,6 +25,3 @@ from controllers import conditions, users
 app.register_blueprint(conditions.router, url_prefix="/api")
 # ! Register the users
 app.register_blueprint(users.router, url_prefix="/api")
-
-
-
