@@ -19,6 +19,9 @@
 
 ## Features 
 
+- Real-time Feedback with Axios: All API requests (to the backend) for actions like posting or commenting are managed by Axios, ensuring asynchronous, real-time updates, enhancing user interactivity.
+
+
 
 ## Future Enhancements 
 
