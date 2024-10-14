@@ -22,6 +22,8 @@
 
 ## Introduction 
 
+Helping Hands is an open forum full application it allows people to speard information about physical and mental health conditions, psot comments, and interact with a community. The backend handles user accounts, database management using SQL and PostgreSQL, and ensures secure data interactions. 
+
 
 ## Project Goals 
 
