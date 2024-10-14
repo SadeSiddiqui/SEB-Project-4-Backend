@@ -72,6 +72,9 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Future Enhancements
 
+- Suicidal Keywords Detection: The application will monitor for language related to suicide. If detected, a modal window will appear with the message, "We've identified language that may indicate distress related to suicide." This will provide users with immediate access to resources such as the Samaritans helpline, emergency mental health numbers, available therapist contact details, and contact information for users who have opted into the "emergency call list."
+- Emergency Call List: Users of the application can volunteer to be part of an "emergency call list," allowing their contact information to be displayed when the suicidal keywords detection system is triggered. This provides peer support options in addition to professional resources.
+- Community Support: Each health condition on the platform will feature a "Community" button, leading to a dedicated page for users living with that specific condition, fostering a sense of connection and support among those with shared experiences.
 
 ## Contributions
 
