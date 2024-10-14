@@ -38,7 +38,14 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Technologies Used
 
+- Node.js and Express: for handling server-side operations 
+- PostgreSQL: for the database
+- TablePlus: as the GUI for database management
+- bcrypt.js: for password hashing
+- JWT (JSON Web Tokens): for user authentication and session management
+- Axios: for making HTTP requests from the frontend 
 
+  
 ## Architecture Overview
 
 
