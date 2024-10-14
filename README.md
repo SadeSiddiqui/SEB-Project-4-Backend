@@ -30,8 +30,11 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Features 
 
+- User Authentication (Signup, Login)
+- CRUD Operations for Conditions and Comments
+- Database Management (PostgreSQL)
+- Error Handling and Validation 
 - Real-time Feedback with Axios: All API requests (to the backend) for actions like posting or commenting are managed by Axios, ensuring asynchronous, real-time updates, enhancing user interactivity
-
 
 ## Technologies Used
 
