@@ -89,6 +89,9 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## License
 
+Licensing: This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+Acknowledgements: A big thank you to collaborator Evyn-Rose Goldstein [evynrose](https://github.com/evynrose) with her help in this project. 
 
 ## Contact 
 
