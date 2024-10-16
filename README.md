@@ -95,6 +95,17 @@ Acknowledgements: A big thank you to collaborator Evyn-Rose Goldstein [evynrose]
 
 ## Contact 
 
+Feel free to reach out for questions or collaboration opportunities: 
+
+Syed Siddiqui: 
+
+[LinkedIn](https://www.linkedin.com/in/syed-siddiqui/)
+
+[Email](syedsiddiqui1@gmail.com)
+
+Evyn-Rose Goldstein: 
+
+[LinkedIn](https://www.linkedin.com/in/evynrose/)
 
 
 
