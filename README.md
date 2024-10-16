@@ -27,6 +27,8 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Project Goals 
 
+- Ensure secure user authentication and data storage.
+- Handle CRUD operations for conditions and comments
 
 ## Features 
 
@@ -48,6 +50,12 @@ Helping Hands is an open forum full application it allows people to speard infor
   
 ## Architecture Overview
 
+- ```config/```: Stores app configuration (e.g., environment settings).
+- ```controllers/```: Handles logic for requests (e.g., fetching and sending condition data).
+- ```middleware/```: Provides a layer for security checks and additional processing.
+- ```models/```: Defines the structure of your data in the database.
+- ```serializers/```: Converts data between formats for easy backend-frontend communication.
+- ```.vscode/```: Contains development-specific settings for VSCode.
 
 ## Installation  
 
