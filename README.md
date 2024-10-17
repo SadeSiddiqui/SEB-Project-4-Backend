@@ -59,6 +59,9 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Installation  
 
+1) ```git clone git@github.com:SadeSiddiqui/SEB-Project-4-Backend.git``` this will download the backend into the users local server
+2) In git use this command ```cd git@github.com:SadeSiddiqui/SEB-Project-4-Backend.git``` this will move you into the project directory that the use rnow has a copy of in their computer now.
+3) 
 
 ## Environment Variables
 
