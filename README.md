@@ -98,7 +98,7 @@ You also need to set up your virtual environment you do that with this command `
 
 ## Environment Variables
 
-1)Create a .env file in the root directory of the project if it doesn’t exist already.
+1) Create a .env file in the root directory of the project if it doesn’t exist already.
 
 2) Add the following variables:
 
