@@ -99,6 +99,20 @@ You also need to set up your virtual environment you do that with this command `
 ## Environment Variables
 
 
+
+
+```FLASK_ENV=development```
+
+```FLASK_SKIP_DOTENV=1```
+
+```FLASK_RUN_PORT=4000```
+
+```FLASK_DEBUG=1```
+
+```DATABASE_URL=postgresql://localhost:5432/conditions_db```
+
+```SECRET=correcthorsebatterystaple```
+
 ## Database Structure
 
 
