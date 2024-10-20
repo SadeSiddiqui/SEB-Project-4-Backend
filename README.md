@@ -59,28 +59,38 @@ Helping Hands is an open forum full application it allows people to speard infor
 
 ## Installation  
 
-Clone the repository 
+1) Clone the repository 
 
 Use ```git clone git@github.com:SadeSiddiqui/SEB-Project-4-Backend.git``` this will download the backend into the users local server but if you are unfamiliar with SSH keys then use the following HTTP code instead ```git clone https://github.com/SadeSiddiqui/SEB-Project-4-Backend.git```
 
-Navigate to the repository 
+2) Navigate to the repository 
 
 Then In git use this command ```cd git@github.com:SadeSiddiqui/SEB-Project-4-Backend.git``` this will move you into the project directory that the use rnow has a copy of in their computer now.
 
-Install the Dependencies 
+3) Install the Dependencies 
 
 Before installing the dependencies you have to create a virtual environment to store the dependencies ```pip install pipenv``` 
 You also need to set up your virtual environment you do that with this command ```pipenv install``` running this command pipenv will access the pipfile from the project you have cloned scan all the packages and libraries listed in the pipfile and automatically install all the required dependencie. However, if or any situation it doesn't work you can run the following commands to manually install are the dependencies needed. 
-pipenv install flask
-pipenv install flask-sqlalchemy
-pipenv install psycopg2-binary
-pipenv install flask-marshmallow
-pipenv install marshmallow-sqlalchemy
-pipenv install flask-bcrypt
-pipenv install pyjwt
-pipenv install pytest
-pipenv install flask-cors
-pipenv install gunicorn
+
+```pipenv install flask```
+
+```pipenv install flask-sqlalchemy```
+
+```pipenv install psycopg2-binary```
+
+```pipenv install flask-marshmallow```
+
+```pipenv install marshmallow-sqlalchemy```
+
+```pipenv install flask-bcrypt```
+
+```pipenv install pyjwt```
+
+```pipenv install pytest```
+
+```pipenv install flask-cors```
+
+```pipenv install gunicorn```
 
 
 
