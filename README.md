@@ -93,9 +93,6 @@ You also need to set up your virtual environment you do that with this command `
 ```pipenv install gunicorn```
 
 
-
-
-
 ## Environment Variables
 
 1) Create a .env file in the root directory of the project if it doesn’t exist already.
@@ -116,6 +113,66 @@ You also need to set up your virtual environment you do that with this command `
 
 ## Database Structure
 
+The database for Helping Hands consists of three main tables: Users, Conditions, and Comments. These tables are related to each other through foreign keys and represent the relationships between users, the conditions they post, and the comments left by users on different conditions.
+
+Users Table
+
+Purpose: Stores information about registered users.
+
+Columns:
+- id (Primary Key, Integer): A unique identifier for each user.
+- username (Text): The user's login name, which must be unique.
+- email (Text): The user's email address, also unique.
+- password_hash (Text): The hashed version of the user's password for secure storage.
+
+Relationships:
+
+- A one-to-many relationship with the Conditions table. A single user can create multiple conditions.
+- A one-to-many relationship with the Comments table, meaning a single user can leave multiple comments on different conditions.
+
+2. Conditions Table
+   
+Purpose: Stores information about various physical and mental health conditions.
+
+Columns:
+- id (Primary Key, Integer): A unique identifier for each condition.
+- name (Text): The name of the condition, which must be unique.
+- about (Text): A description of the condition.
+- info (Text): Further details and information regarding symptoms, treatments, etc.
+- advice (Text): Advice or suggestions for managing the condition.
+- user_id (Foreign Key, Integer): Links each condition to the user who created it.
+
+Relationships:
+- A one-to-many relationship with the Comments table. Each condition can have multiple comments.
+- A many-to-one relationship with the Users table, linking each condition to the user who created it.
+  
+3. Comments Table
+   
+Purpose: Stores user-generated comments on specific health conditions.
+
+Columns:
+- id (Primary Key, Integer): A unique identifier for each comment.
+- content (Text): The body of the comment.
+- title (Text): The title or subject of the comment.
+- conditions_id (Foreign Key, Integer): Links each comment to a specific condition.
+- user_id (Foreign Key, Integer): Links each comment to the user who posted it.
+  
+Relationships:
+- A many-to-one relationship with the Conditions table, meaning each comment is linked to one condition.
+- A many-to-one relationship with the Users table, meaning each comment is linked to one user.
+
+Relationships Overview
+- Users & Conditions: One user can create multiple conditions.
+- Conditions & Comments: Each condition can have multiple comments, but each comment belongs to only one condition.
+- Users & Comments: Each user can leave multiple comments, but each comment belongs to one user.
+
+Explanation of the Structure:
+
+- Users Table: Manages all user-related data, including login credentials and relationships with conditions and comments.
+- Conditions Table: Stores details about health conditions, with each condition linked to the user who created it.
+- Comments Table: Allows users to comment on conditions, each linked to a specific condition and user.
+
+This structure reflects how the data flows between users, conditions, and comments in the backend, allowing for a clear understanding of how CRUD operations work in your application.
 
 ## Authentication & Security
 
