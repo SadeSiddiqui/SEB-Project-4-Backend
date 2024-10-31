@@ -176,6 +176,15 @@ This structure reflects how the data flows between users, conditions, and commen
 
 ## Authentication & Security
 
+The backend of Helping Hands includes the following security measures to protect user data:
+
+User Authentication: Uses JSON Web Tokens (JWT) for secure user authentication. Upon successful login, users are issued a token, which is required for accessing protected endpoints.
+
+Password Hashing: User passwords are hashed using bcrypt, which ensures that passwords are stored securely in the database.
+
+Environment Variables: Sensitive information, such as database URLs and JWT secret keys, are stored in environment variables. These variables are managed securely and excluded from the codebase using .env. 
+
+These security practices ensure secure data handling and maintain user privacy, protecting the system from unauthorized access.
 
 ## Error Handling
 
